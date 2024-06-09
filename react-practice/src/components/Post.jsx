@@ -1,12 +1,11 @@
-const names = ["Betül", "Cabbar"];
+import classes from './Post.module.css'
+function Post(props) {
 
-function Post() {
-
-    const selectedName = Math.random() > 0.5 ? names[0] : names[1];
-    return (<div>
-        <p>{selectedName}</p>
-        <p>Nextjs harikadir.</p>
-    </div>
+    return (
+    <li className={classes.post}>
+        <p className={classes.author}>{props.author}</p>
+        <p className={classes.text}>{props.body}</p>
+    </li>
     );
 }
 
